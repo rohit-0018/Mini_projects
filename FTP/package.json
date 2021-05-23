@@ -4,11 +4,19 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ./src/index.js"
+    "dev": "nodemon ./src/index.js",
+    "server": "nodemon ./src/server/server.js",
+    "client": "nodemon ./src/client/client.js",
+    "server:bg": "pm2 start ./src/server/server.js",
+    "restart-server:bg": "pm2 restart 0",
+    "stop-server:bg": "pm2 stop 0"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "net": "^1.0.2"
   }
 }
